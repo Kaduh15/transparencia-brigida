@@ -6,16 +6,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check --fix --unsafe"
+    "lint": "biome check --fix --unsafe",
+    "db:seed": "tsx --env-file .env ./src/db/seed.ts",
+    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.6",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
     "next": "15.1.6",
     "postcss": "^8.5.1",
+    "postgres": "^3.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.6",
-    "tsx": "^4.19.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -23,6 +28,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.30.4",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }

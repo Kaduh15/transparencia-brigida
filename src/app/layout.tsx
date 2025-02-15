@@ -3,7 +3,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Transparência Brigida',
-  description: 'Sistema de arrecadação para sistemas hídrico do projeto Brigida',
+  description:
+    'Sistema de arrecadação para sistemas hídrico do projeto Brigida',
 }
 
 export default function RootLayout({
