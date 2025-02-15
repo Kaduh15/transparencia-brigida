@@ -8,6 +8,13 @@
       "when": 1739646509399,
       "tag": "0000_silly_machine_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1739648630506,
+      "tag": "0001_clammy_mysterio",
+      "breakpoints": true
     }
   ]
 }

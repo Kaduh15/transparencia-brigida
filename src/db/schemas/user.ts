@@ -1,16 +1,16 @@
 import { pgEnum, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core'
 
-export const userType = ['admin', 'representante'] as const
-export type UserType = typeof userType[number]
+export const userRole = ['admin', 'representante'] as const
+export type UserRole = typeof userRole[number]
 
-export const pgUserType = pgEnum('user_type', userType)
+export const pgUserRole = pgEnum('user_role', userRole)
 
 export const User = pgTable('users', {
   id: serial('id').primaryKey(),
   nome: text('nome').notNull(),
   email: text('email').unique().notNull(),
   password: text('password').notNull(),
-  type: pgUserType(),
+  role: pgUserRole(),
   created_at: timestamp('created_at', {
     withTimezone: true,
   })
